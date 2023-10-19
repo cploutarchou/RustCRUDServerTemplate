@@ -10,16 +10,16 @@ A ready-to-use template for building CRUD web servers in Rust. Streamline your d
 
 ### Installation
 
-### 1. Clone the repository:**
+### 1. Clone the repository:
 ```bash
    git clone https://github.com/your_username/rust_crud_server_template.git
 ````
-### 2. Navigate into the directory:**
+### 2. Navigate into the directory:
 ```bash
  cd rust_crud_server_template
 ````
 
-### 3. Run the server (usually via cargo run, but this can vary depending on your setup):**
+### 3. Run the server (usually via cargo run, but this can vary depending on your setup):
 ```bash 
 cargo run
 ```
