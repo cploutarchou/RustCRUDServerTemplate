@@ -1,6 +1,6 @@
-# rust_crud_server_template
+# Rust CRUD Web Server Blueprint (WIP - Work in Progress)
 
-A ready-to-use template for building CRUD web servers in Rust. Streamline your development process with this foundational setup, optimized for performance and maintainability.
+🚧 This blueprint is currently under active development. While it's designed to provide a foundational setup for creating CRUD (Create, Read, Update, Delete) web servers using Rust, some features might be experimental or subject to change.
 
 ## Getting Started
 
