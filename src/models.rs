@@ -2,6 +2,8 @@ use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::fs;
 use std::io::Write;
+use std::sync::Mutex;
+use actix_web::{HttpResponse, Responder, web};
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 struct Task {
@@ -76,4 +78,16 @@ impl Database {
         let db:Database = serde_json::from_str(&file_content)?;
         Ok(db)
     }
+}
+
+struct  ApplicationState{
+    db:Mutex<Database>
+}
+
+async  fn create_task(application_state: web::Data<ApplicationState>,task: web::Json<Task>)->impl Responder{
+    let mut db = application_state.db.lock().unwrap();
+    db.insert(task.into_inner());
+    let _ = db.save_to_file();
+    HttpResponse::Ok().finish()
+
 }
